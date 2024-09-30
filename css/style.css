@@ -87,6 +87,42 @@ body{
     display:none; /*biar awalnya ngga ada*/
 }
 
+/*Navbar search form*/
+.navbar .search-form{
+    position:absolute;
+    top:100%;
+    right:7%;
+    background-color:#fff;
+    width:50rem;
+    height:5rem;
+    display:flex;
+    align-items:center;
+    transform: scaleY(0);
+    transform-origin:top;/*untuk menentukan sumbu atau poros */
+    transition:0.3s;
+}
+
+.navbar .search-form.active {
+    transform:scaleY(1);
+}
+
+.navbar .search-form input{
+    height:100%;
+    width:100%;
+    font-size:1.6rem;
+    color:var(--bg);
+    padding:1rem;
+}
+
+.navbar .search-form label {
+    cursor:pointer;
+    font-size:2rem;
+    margin-right:1.5rem;
+    color:var(--bg);
+
+}
+
+
 /*Hero section*/
 .hero{
     min-height:100vh;
@@ -149,17 +185,17 @@ body{
 
 /*about section*/
 
-.about, .menu, .contact{
+.about, .menu, .products, .contact {
     padding: 8rem 7% 1.4rem;
 }
 
-.about h2 , .menu h2, .contact h2{
+.about h2, .menu h2, .products h2, .contact h2{
     text-align:center;
     font-size:2.6rem;
     margin-bottom:3rem;
 }
 
-.about h2 span, .menu h2 span, .contact h2 span{
+.about h2 span, .menu h2 span, .products h2 span, .contact h2 span{
     color: var(--primary);
 }
 
@@ -197,12 +233,12 @@ body{
 
 /*Menu*/
 
-.menu h2, .contact h2{
+.menu h2, .contact h2, .products h2{
     margin-bottom:1rem;
 }
 
 
-.menu p , .contact p{
+.menu p , .contact p, .products p{
     text-align:center;
     max-width: 30rem;
     margin:auto;
@@ -211,7 +247,7 @@ body{
     line-height:1.6;
 }
 
-.menu .row  {
+.menu .row {
     display:flex;
     flex-wrap:wrap;
     margin-top:5rem;
@@ -370,6 +406,10 @@ footer .credits a{
     }
     .navbar .navbar-nav a:hover::after{
         transform: scaleX(0.2);
+    }
+    .navbar .search-form{
+        width:90%;
+        right:2rem;
     }
 
 /*about*/
